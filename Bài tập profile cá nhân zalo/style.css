@@ -1,0 +1,80 @@
+/* Thiết lập chung cho nền trang */
+body {
+  font-family: "Times New Roman", sans-serif;
+  background-color: #abcfff;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 350px;
+  margin: 50px auto; 
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  background-color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; 
+  border: 3px solid #abcfff;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.name {
+  font-size: 22px;
+  color: #1f2937;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.job-title {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-weight: bold;
+}
+
+.bio {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  list-style: none; 
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.skill-item {
+  display: inline-block;
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #3bb8f6a2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-contact:hover {
+  background-color: #6b95ff;
+}
