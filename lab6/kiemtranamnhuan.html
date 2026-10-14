@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+    <h2>Kiểm tra năm nhuận</h2>
+    
+    <label>Nhập một năm:</label>
+    <input type="number" id="txtNam">
+    <button onclick="kiemTraNam()">Kiểm tra</button>
+    
+    <div id="ketQuaNam"></div>
+
+    <script>
+        function kiemTraNam() {
+            let nam = parseInt(document.getElementById("txtNam").value);
+            
+            if (isNaN(nam)) {
+                alert("Vui lòng nhập một năm hợp lệ!");
+                return;
+            }
+
+            let laNamNhuan = (nam % 4 === 0 && nam % 100 !== 0) || (nam % 400 === 0);
+
+            if (laNamNhuan) {
+                document.getElementById("ketQuaNam").innerHTML = "<br>Năm " + nam + " là năm nhuận.";
+            } else {
+                document.getElementById("ketQuaNam").innerHTML = "<br>Năm " + nam + " không phải là năm nhuận.";
+            }
+        }
+    </script>
+</body>
+</html>

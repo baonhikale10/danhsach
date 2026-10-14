@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> xep loai hoc luc </h2>
+    <label for=""> Nhap vao diem: </label>
+    <input type="number" name="" id="diem">
+    <br> <br>
+    <button onclick="xep()"> Xep loai </button>
+    <p id="ketqua"></p>
+
+    <script>
+        function xep() {
+            let diem = document.getElementById("diem").value;
+            if (diem >= 9) {
+                document.getElementById("ketqua").innerText = "Xep loai: Gioi";
+            } else if (diem >= 7) {
+                document.getElementById("ketqua").innerText = "Xep loai: Kha";
+            } else if (diem >= 5) {
+                document.getElementById("ketqua").innerText = "Xep loai: Trung binh";
+            } else {
+                document.getElementById("ketqua").innerText = "Xep loai: Yeu";
+            }
+        }
+    </script>
+</body>
+</html>

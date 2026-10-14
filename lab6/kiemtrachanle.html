@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> KIEM TRA SO CHAN LE </h2>
+    <label for=""> Nhap vao mot so: </label>
+    <input type="number" name="" id="so">
+    <br> <br>
+    <button onclick="kiemtra()"> Kiem tra </button>
+    <p id="ketqua"></p>
+
+    <script>
+        function kiemtra() {
+            let so = document.getElementById("so").value;
+            if (so % 2 == 0) {
+                document.getElementById("ketqua").innerText = "So " + so + " la so chan";
+            } else {
+                document.getElementById("ketqua").innerText = "So " + so + " la so le";
+            }
+        }
+    </script>
+</body>
+</html>

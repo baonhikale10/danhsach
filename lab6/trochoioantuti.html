@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Trò chơi oản tù tì </h2>
+    <label for=""> Xin mời bạn chọn: </label>
+    <button onclick="da()"> Đá </button>
+    <button onclick="keo()"> Kéo </button>
+    <button onclick="giay()"> Giấy </button>
+    <p id="player">Lựa chọn của bạn: </p>
+    <p id="computer">Lựa chọn của máy: </p>
+    <p id="game">Kết quả: </p>
+
+    <script>
+        function xuLyChoi(player) {
+            let computer = Math.floor(Math.random() * 3);
+            if (computer == 0) {
+                computer = "Đá";
+            } else if (computer == 1) {
+                computer = "Kéo";
+            } else {
+                computer = "Giấy";
+            }
+
+            document.getElementById("player").innerText = "Lựa chọn của bạn: " + player;
+            document.getElementById("computer").innerText = "Lựa chọn của máy: " + computer;
+
+            if (player == computer) {
+                document.getElementById("game").innerText = "Kết quả: Hòa";
+            } else if ((player == "Đá" && computer == "Kéo") || (player == "Kéo" && computer == "Giấy") || (player == "Giấy" && computer == "Đá")) {
+                document.getElementById("game").innerText = "Kết quả: Bạn thắng";
+            } else {
+                document.getElementById("game").innerText = "Kết quả: Máy thắng";
+            }
+        }
+
+        function da() {
+            xuLyChoi("Đá");
+        }
+
+        function keo() {
+            xuLyChoi("Kéo");
+        }
+
+        function giay() {
+            xuLyChoi("Giấy");
+        }
+    </script>
+</body>
+</html>

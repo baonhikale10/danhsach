@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+    <h2>Máy tính đơn giản</h2>
+
+    <label>Số thứ nhất:</label>
+    <input type="number" id="so1"><br><br>
+    
+    <label>Số thứ hai:</label>
+    <input type="number" id="so2"><br><br>
+    
+    <button onclick="tinhToan('+')">Cộng</button>
+    <button onclick="tinhToan('-')">Trừ</button>
+    <button onclick="tinhToan('*')">Nhân</button>
+    <button onclick="tinhToan('/')">Chia</button>
+
+    <div id="ketQuaTinh"></div>
+
+    <script>
+        function tinhToan(phepTinh) {
+            let num1 = parseFloat(document.getElementById("so1").value);
+            let num2 = parseFloat(document.getElementById("so2").value);
+            let ketQua = "";
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Vui lòng nhập đủ hai số!");
+                return;
+            }
+
+            if (phepTinh === '+') ketQua = num1 + num2;
+            else if (phepTinh === '-') ketQua = num1 - num2;
+            else if (phepTinh === '*') ketQua = num1 * num2;
+            else if (phepTinh === '/') {
+                if (num2 === 0) {
+                    ketQua = "Không thể chia cho 0!";
+                } else {
+                    ketQua = num1 / num2;
+                }
+            }
+
+            document.getElementById("ketQuaTinh").innerHTML = "<br>Kết quả: " + ketQua;
+        }
+    </script>
+</body>
+</html>

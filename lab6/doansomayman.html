@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> chuong trinh doan so may man </h2>
+    <label for=""> Nhap vao mot so: </label>
+    <input type="number" name="" id="so">
+    <br> <br>
+    <button onclick="doan()"> Doan </button>
+    <p id="ketqua"></p>     
+
+    <script>
+        function doan() {
+            let so = document.getElementById("so").value;
+            let mayman = Math.floor(Math.random() * 10) + 1;
+            if (so == mayman) {
+                document.getElementById("ketqua").innerText = "Chuc mung ban da doan dung so may man: " + mayman;
+            } else {
+                document.getElementById("ketqua").innerText = "Ban da doan sai. So may man la: " + mayman;
+            }
+        }
+    </script> 
+</body>
+</html>

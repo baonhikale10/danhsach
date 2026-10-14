@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Chương trình Dự đoán nghề nghiệp! </h2>
+    
+    <label for="Ten"> Nhập tên người dùng: </label>
+    <input type="text" id="Ten">
+    <br> <br>
+    
+    <button onclick="duDoanNgheNghiep()"> Dự đoán </button>
+    <div id="ketQua"></div>
+
+    <script>
+        function duDoanNgheNghiep() {
+            let ten = document.getElementById("Ten").value.trim();
+            
+            if (ten === "") {
+                alert("Vui lòng nhập tên của bạn trước nhé!");
+                return;
+            }
+
+            let danhSachNghe = [
+                "Lập trình viên (Developer)",
+                "Kỹ sư dữ liệu (Data Engineer)",
+                "Chuyên gia An ninh mạng",
+                "Nhà thiết kế đồ họa (Designer)",
+                "Quản lý dự án (Project Manager)",
+                "Chuyên viên phân tích dữ liệu",
+                "Kiểm thử phần mềm (Tester)"
+            ];
+
+            let randomIndex = Math.floor(Math.random() * danhSachNghe.length);
+            let ngheChon = danhSachNghe[randomIndex];
+
+            document.getElementById("ketQua").innerHTML = "<br>Xin chào " + ten + "!<br>Nghề nghiệp tương lai của bạn là: " + ngheChon;
+        }
+    </script>
+</body>
+</html>
