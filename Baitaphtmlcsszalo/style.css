@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffafc;
+}
+
+.header-info {
+    min-height: 130px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: white;
+    padding: 7px;
+}
+
+/* HEADER */
+header {
+    background-color: #de8aa4;
+    color: white;
+    text-align: center;
+}
+
+/* Hàng chứa tên shop và khẩu hiệu */
+.header-info {
+    padding: 25px;
+}
+
+.header-info h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.header-info p {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Hàng chứa menu điều hướng */
+nav {
+    background-color: #de8aa4;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c45577;
+    background-color: white;
+}
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.about-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-content h2 {
+    margin-bottom: 15px;
+    color: #d96c8c;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 10px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #d96c8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #c45577;
+}
+
+/* SẢN PHẨM */
+#products {
+    padding: 50px;
+}
+
+#products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d96c8c;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 10px;
+}
+
+.card span {
+    display: block;
+    margin-bottom: 15px;
+    color: #d96c8c;
+    font-weight: bold;
+}
+
+/* LIÊN HỆ */
+#contact {
+    background-color: #fdf1f5;
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 15px;
+    color: #d96c8c;
+}
+
+#contact p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* HIỂN THỊ TRÊN ĐIỆN THOẠI */
+@media (max-width: 768px) {
+    .header-info h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+    }
+
+    #products {
+        padding: 35px 20px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+}
